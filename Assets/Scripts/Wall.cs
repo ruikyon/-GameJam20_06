@@ -42,7 +42,7 @@ public class Wall : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!gameOver && count < 3) 
+        if((Time.time - startTime) > 5 && !gameOver && count < 3) 
         {
             hp--;
             caution.SetActive(true);

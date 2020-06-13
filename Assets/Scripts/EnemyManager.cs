@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour
             others.Add(Instantiate(enemyPrefab));
         }
 
-        StartCoroutine(Decrease());
+        Scheduler.AddEvent(5, () => StartCoroutine(Decrease()));
     }
 
     // Update is called once per frame
